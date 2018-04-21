@@ -22,8 +22,7 @@ function getTopNewsAJAX(){
     $('#content').show();
     $('#newsCont').hide();
     $('#btnBack').hide();
-    $("#content").html('');    
-    alert('Calling: http://192.168.0.8/news/api/v1.0/topnews');
+    $("#content").html('');        
     $.get("http://192.168.0.8/news/api/v1.0/topnews",function(data){},"json")
         .done(function(data){
             console.log("Response received...");
