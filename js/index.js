@@ -9,7 +9,7 @@ $(document).ready(function () {
 function onDeviceReady() {
     console.log('Device is all ready');    
     $.ajaxSetup({
-        timeout: 3000
+        timeout: 7000
     });
     // Step#1: Get top 10 news            
     // getTopNews();
@@ -22,7 +22,8 @@ function getTopNewsAJAX(){
     $('#content').show();
     $('#newsCont').hide();
     $('#btnBack').hide();
-    $("#content").html('');
+    $("#content").html('');    
+    alert('Calling: http://192.168.0.8/news/api/v1.0/topnews');
     $.get("http://192.168.0.8/news/api/v1.0/topnews",function(data){},"json")
         .done(function(data){
             console.log("Response received...");
